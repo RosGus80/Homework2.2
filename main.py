@@ -1,8 +1,5 @@
-from functions import students_load
-from functions import professions_load
-from functions import get_student
-from functions import get_profession
-from functions import check_fitness
+from functions import *
+
 
 #Создаю списки, в которых будут храниться валидные порядковые номера студентов и названия профессий (чтобы не проверять валидность итерацией по списку после ввода числа пользователем)
 students = students_load()
