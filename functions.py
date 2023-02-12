@@ -13,24 +13,22 @@ def professions_load():
         return json.loads(data)
 
 
-def get_student(pk):
-    with open("students.json") as file:
-        data_json = file.read()
-        data = json.loads(data_json)
+def get_student(data, pk):
         for student in data:
             if student["pk"] == pk:
                 return student
-                break
+        else:
+            print("У нас нет такого студента")
+            quit()
 
 
-def get_profession(title):
-    with open("professions.json") as file:
-        data_json = file.read()
-        data = json.loads(data_json)
+def get_profession(data, title):
         for profession in data:
             if profession["title"] == title:
                 return profession
-                break
+        else:
+            print("У нас нет такой профессии")
+            quit()
 
 
 def check_fitness(student, profession):
