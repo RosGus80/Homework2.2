@@ -1,8 +1,8 @@
 from functions import *
-
 def main():
     student_data = None
-    #Создаю списки, в которых будут храниться валидные порядковые номера студентов и названия профессий (чтобы не проверять валидность итерацией по списку после ввода числа пользователем)
+    # Создаю списки, в которых будут храниться валидные порядковые номера студентов и названия профессий (чтобы не
+    # проверять валидность итерацией по списку после ввода числа пользователем)
     students = students_load()
     valid_pk = []
     for student in students:
@@ -17,14 +17,13 @@ def main():
         student_num = input("Введите номер студента: ")
         if student_num.isdigit():
             student_num = int(student_num)
-            student_data = get_student(students, student_num) #Тут будет храниться вся информация о студенте, которого выбрал пользователь
+            student_data = get_student(students, student_num)  #Тут будет храниться вся информация о студенте, которого выбрал пользователь
             break
         else:
             print("Введите число")
 
 
     print(f"Студент {student_data['full_name']}")
-    student_skillss = ", ".join(student_data["skills"])
     print(f"Знает {', '.join(student_data['skills'])}")
 
 
@@ -46,4 +45,3 @@ def main():
 
 
 main()
-
